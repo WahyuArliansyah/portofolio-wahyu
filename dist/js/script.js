@@ -53,3 +53,28 @@ document.addEventListener("keydown", function (e) {
     });
   }
 });
+
+function openImageModal(imageSrc, title) {
+  const modal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+  const modalTitle = document.getElementById("modalTitle");
+
+  modalImage.src = imageSrc;
+  modalImage.alt = title;
+  modalTitle.textContent = title;
+  modal.classList.remove("hidden");
+  document.body.style.overflow = "hidden"; // Prevent background scrolling
+}
+
+function closeImageModal() {
+  const modal = document.getElementById("imageModal");
+  modal.classList.add("hidden");
+  document.body.style.overflow = "auto"; // Restore scrolling
+}
+
+// Close modal when pressing Escape key
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeImageModal();
+  }
+});
