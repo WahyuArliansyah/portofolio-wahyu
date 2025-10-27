@@ -1,80 +1,78 @@
-// humburger
-
+// === HAMBURGER & NAV MENU ===
 const hamburger = document.querySelector("#hamburger");
 const navMenu = document.querySelector("#nav-menu");
 
+// Buka/tutup menu saat hamburger di klik
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("hamburger-active");
   navMenu.classList.toggle("hidden");
 });
 
-// navbar fixed
-window.onscroll = function () {
-  const header = document.querySelector("header");
-  const fixedNav = header.offsetTop;
+// Tutup menu saat klik di luar area menu
+document.addEventListener("click", function (e) {
+  if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+    hamburger.classList.remove("hamburger-active");
+    navMenu.classList.add("hidden");
+  }
+});
 
-  if (window.pageYOffset > fixedNav) {
+// Tutup menu saat link navigasi di klik (untuk mobile)
+navMenu.addEventListener("click", function (e) {
+  if (e.target.tagName === "A") {
+    hamburger.classList.remove("hamburger-active");
+    navMenu.classList.add("hidden");
+  }
+});
+
+// === NAVBAR FIXED (STICKY HEADER) ===
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  if (window.scrollY > 0) {
     header.classList.add("navbar-fixed");
   } else {
     header.classList.remove("navbar-fixed");
   }
-};
+});
 
-function openModal(modalId) {
-  const modal = document.getElementById(modalId);
+// === MODAL LOGIC ===
+function openImageModal(imageSrc, title, description) {
+  const modal = document.getElementById("imageModal");
+  if (!modal) return;
+
+  modal.querySelector("#modalImage").src = imageSrc;
+  modal.querySelector("#modalTitle").textContent = title;
+  modal.querySelector("#modalDescription").textContent = description;
+
   modal.classList.remove("hidden");
   modal.classList.add("flex");
   document.body.style.overflow = "hidden";
 }
 
-function closeModal(modalId) {
-  const modal = document.getElementById(modalId);
+function closeImageModal() {
+  const modal = document.getElementById("imageModal");
+  if (!modal) return;
+
   modal.classList.add("hidden");
   modal.classList.remove("flex");
   document.body.style.overflow = "auto";
 }
 
-// Tutup modal ketika mengklik di luar gambar
-document.querySelectorAll('[id^="modal"]').forEach((modal) => {
-  modal.addEventListener("click", function (e) {
-    if (e.target === this) {
-      closeModal(this.id);
+const closeModalButton = document.getElementById("closeModalButton");
+if (closeModalButton) {
+  closeModalButton.addEventListener("click", closeImageModal);
+}
+
+const imageModal = document.getElementById("imageModal");
+if (imageModal) {
+  imageModal.addEventListener("click", function (e) {
+    if (e.target === imageModal) {
+      closeImageModal();
     }
   });
-});
-
-// Tutup modal dengan tombol Escape
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") {
-    document.querySelectorAll('[id^="modal"]').forEach((modal) => {
-      if (!modal.classList.contains("hidden")) {
-        closeModal(modal.id);
-      }
-    });
-  }
-});
-
-function openImageModal(imageSrc, title) {
-  const modal = document.getElementById("imageModal");
-  const modalImage = document.getElementById("modalImage");
-  const modalTitle = document.getElementById("modalTitle");
-
-  modalImage.src = imageSrc;
-  modalImage.alt = title;
-  modalTitle.textContent = title;
-  modal.classList.remove("hidden");
-  document.body.style.overflow = "hidden"; // Prevent background scrolling
 }
 
-function closeImageModal() {
-  const modal = document.getElementById("imageModal");
-  modal.classList.add("hidden");
-  document.body.style.overflow = "auto"; // Restore scrolling
-}
-
-// Close modal when pressing Escape key
 document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
+  if (event.key === "Escape" && !imageModal.classList.contains("hidden")) {
     closeImageModal();
   }
 });
