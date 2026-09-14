@@ -3,75 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio - Wahyu Arliansyah</title>
+    <title>Portofolio Wahyu Arliansyah</title>
     <link href="dist/output.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="bg-white">
-    <header
-      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-50"
-    >
-      <div class="container mx-auto">
-        <div class="flex items-center justify-between relative">
-          <div class="px-4">
-            <a href="#home" class="font-bold text-lg text-primary block py-6"
-              >Wahyu Arliansyah</a
-            >
-          </div>
-          <div class="flex items-center px-4">
+  <body class="bg-dark-bg text-slate-200 antialiased relative overflow-x-hidden selection:bg-primary/30 selection:text-primary">
+    
+    <!-- Background Glow Effects -->
+    <div class="fixed top-0 left-1/4 -z-10 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="fixed top-1/3 right-10 -z-10 w-96 h-96 bg-accent-indigo/10 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="fixed bottom-10 left-10 -z-10 w-96 h-96 bg-accent-cyan/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <!-- Header / Navbar Start -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between py-4 border-b border-slate-800/40 lg:border-none">
+          <a href="#home" class="flex items-center gap-2 group">
+            <span class="w-3 h-3 rounded-full bg-primary group-hover:scale-125 transition duration-300 shadow-glow"></span>
+            <span class="font-extrabold text-xl tracking-tight text-white group-hover:text-primary transition duration-300">
+              Wahyu<span class="text-primary">Arliansyah</span>
+            </span>
+          </a>
+
+          <div class="flex items-center">
             <button
               id="hamburger"
               name="hamburger"
               type="button"
-              class="block absolute right-4 lg:hidden"
+              class="block absolute right-4 lg:hidden p-2 rounded-lg bg-slate-900/80 border border-slate-800 focus:outline-none"
+              aria-label="Toggle Navigation Menu"
             >
-              <span
-                class="hamburger-line transition duration-300 ease-in-out origin-top-left"
-              ></span>
-              <span
-                class="hamburger-line transition duration-300 ease-in-out"
-              ></span>
-              <span
-                class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
-              ></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
             </button>
+
             <nav
               id="nav-menu"
-              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+              class="hidden absolute py-6 px-6 bg-slate-900/95 backdrop-blur-xl border border-slate-800 shadow-2xl rounded-2xl max-w-[280px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:border-none lg:shadow-none lg:max-w-full lg:p-0"
             >
-              <ul class="block lg:flex">
-                <li class="group">
-                  <a
-                    href="#home"
-                    class="text-base text-dark py-2 mx-4 flex group-hover:text-primary"
-                    >Home</a
-                  >
+              <ul class="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-8">
+                <li>
+                  <a href="#home" class="text-sm font-medium text-slate-300 hover:text-primary transition duration-300">Home</a>
                 </li>
-                <li class="group">
-                  <a
-                    href="#about"
-                    class="text-base text-dark py-2 mx-4 flex group-hover:text-primary"
-                    >About Me</a
-                  >
+                <li>
+                  <a href="#about" class="text-sm font-medium text-slate-300 hover:text-primary transition duration-300">About</a>
                 </li>
-                <li class="group">
-                  <a
-                    href="#portfolio"
-                    class="text-base text-dark py-2 mx-4 flex group-hover:text-primary"
-                    >Projects</a
-                  >
+                <!-- <li>
+                  <a href="#skills" class="text-sm font-medium text-slate-300 hover:text-primary transition duration-300">Skills</a>
+                </li> -->
+                <li>
+                  <a href="#portfolio" class="text-sm font-medium text-slate-300 hover:text-primary transition duration-300">Projects</a>
                 </li>
-                <li class="group">
-                  <a
-                    href="#contact"
-                    class="text-base text-dark py-2 mx-4 flex group-hover:text-primary"
-                    >Contact</a
-                  >
+                <li>
+                  <a href="#contact" class="text-sm font-medium text-slate-300 hover:text-primary transition duration-300">Contact</a>
                 </li>
               </ul>
             </nav>
@@ -79,332 +69,514 @@
         </div>
       </div>
     </header>
+    <!-- Header / Navbar End -->
+
     <main>
-      <!-- Home Start -->
-      <section id="home" class="pt-36 pb-32">
-        <div class="container mx-auto">
-          <div class="flex flex-wrap">
-            <div class="w-full self-center px-4 lg:w-1/2">
-              <h1 class="text-base font-semibold text-primary md:text-xl">
-                Hello 👋, I'm
-                <span
-                  class="block font-bold text-dark text-4xl mt-1 lg:text-5xl"
-                  >Wahyu Arliansyah</span
-                >
+      <!-- Hero Start -->
+      <section id="home" class="min-h-screen flex items-center justify-center pt-28 pb-16 relative">
+        <div class="container mx-auto px-4 w-full">
+          <div class="flex flex-wrap items-center">
+            
+            <div class="w-full lg:w-7/12 mb-12 lg:mb-0">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-teal-500/30 text-teal-300 text-xs font-semibold mb-6 shadow-glow">
+                <span class="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse"></span>
+                Available for Freelance & Full-time Roles
+              </div>
+
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-4">
+                Hello, I'm <br />
+                <span class="text-gradient">Wahyu Arliansyah</span>
               </h1>
-              <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">
-                UI/UX Designer & Mobile Developer
-              </h2>
-              <p class="font-medium text-secondary leading-relaxed mb-10">
-                Welcome to my digital portfolio. Let’s create an extraordinary
-                user experience together!
-              </p>
-              <a
-                href="dist/Curriculum-Vitae.pdf"
-                target="_blank"
-                class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
-              >
-                Download CV
-              </a>
-            </div>
-            <div class="w-full self-end px-4 lg:w-1/2">
-              <div class="relative mt-10 lg:mt-0">
-                <img
-                  src="dist/img/real-rmv.png"
-                  alt="Wahyu Arliansyah"
-                  class="max-w-full mx-auto"
-                />
-                <span
-                  class="absolute -bottom-10 -z-10 left-1/2 -translate-x-1/2 md:scale-125"
-                >
-                  <svg
-                    class="w-full h-auto max-w-[400px]"
-                    viewBox="0 0 200 200"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill="#14b8a6"
-                      d="M43,-15.3C51.1,11.1,50,39.2,34.8,51C19.5,62.9,-9.9,58.5,-30.8,43.1C-51.8,27.7,-64.4,1.3,-57.8,-22.9C-51.3,-47.1,-25.6,-69.2,-4.1,-67.9C17.4,-66.5,34.8,-41.7,43,-15.3Z"
-                      transform="translate(100 100) scale(1.1)"
-                    />
-                  </svg>
+
+              <div class="flex flex-wrap items-center gap-2 mb-6">
+                <span class="px-3 py-1 rounded-md bg-slate-800/80 border border-slate-700/60 text-slate-300 text-xs font-semibold">
+                  UI/UX Designer
+                </span>
+                <span class="text-slate-600">•</span>
+                <span class="px-3 py-1 rounded-md bg-slate-800/80 border border-slate-700/60 text-slate-300 text-xs font-semibold">
+                  Mobile Developer
+                </span>
+                <span class="text-slate-600">•</span>
+                <span class="px-3 py-1 rounded-md bg-slate-800/80 border border-slate-700/60 text-slate-300 text-xs font-semibold">
+                  Informatics Student
                 </span>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Home End -->
 
-      <!-- About Start -->
-      <section id="about" class="pt-32 pb-32 bg-slate-50">
-        <div class="container mx-auto">
-          <div class="flex flex-wrap lg:flex-nowrap items-center">
-            <div class="w-full lg:w-1/2 px-4 flex justify-center mb-10 lg:mb-0">
-              <div class="relative max-w-sm mx-auto">
-                <div class="aspect-square rounded-lg shadow-lg overflow-hidden">
-                  <img
-                    src="dist/img/my-profile.png"
-                    alt="Foto Profil Wahyu Arliansyah"
-                    class="w-full h-full object-cover"
-                  />
+              <p class="text-base sm:text-lg text-slate-400 max-w-xl leading-relaxed mb-10">
+                Crafting modern digital experiences that combine intuitive UI/UX design with clean, high-performance mobile software engineering.
+              </p>
+
+              <div class="flex flex-wrap items-center gap-4">
+                <a
+                  href="#portfolio"
+                  class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-primary to-accent-cyan text-white font-semibold text-sm hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                >
+                  <span>Explore My Work</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                  </svg>
+                </a>
+
+                <a
+                  href="dist/Curriculum-Vitae.pdf"
+                  target="_blank"
+                  class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-slate-900/80 border border-slate-700/80 text-slate-200 font-semibold text-sm hover:bg-slate-800 hover:border-slate-600 transition-all duration-300"
+                >
+                  <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                  <span>Download CV</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="w-full lg:w-5/12 flex justify-center">
+              <div class="relative max-w-sm sm:max-w-md w-full">
+                <!-- Outer Glow Aura -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-primary/30 to-accent-indigo/30 rounded-3xl blur-2xl -z-10 transform scale-95"></div>
+
+                <!-- Main Hero Image Frame -->
+                <div class="glass-card rounded-3xl p-4 relative overflow-hidden group">
+                  <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-slate-950/80 relative">
+                    <img
+                      src="dist/img/1789133794525.jpg"
+                      alt="Wahyu Arliansyah"
+                      class="w-full h-full object-cover object-top group-hover:scale-105 transition-all duration-500"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                  </div>
+
+                  <!-- Floating Stat Pill 1 -->
+                  <div class="absolute top-8 left-6 glass-card py-2 px-3.5 rounded-xl flex items-center gap-2.5 shadow-xl">
+                    <span class="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-400 flex items-center justify-center text-sm font-bold">🎨</span>
+                    <div>
+                      <p class="text-[11px] text-slate-400 font-medium">Focus</p>
+                      <p class="text-xs text-white font-bold">UI/UX Design</p>
+                    </div>
+                  </div>
+
+                  <!-- Floating Stat Pill 2 -->
+                  <div class="absolute bottom-8 right-6 glass-card py-2 px-3.5 rounded-xl flex items-center gap-2.5 shadow-xl">
+                    <span class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-sm font-bold">📱</span>
+                    <div>
+                      <p class="text-[11px] text-slate-400 font-medium">Tech</p>
+                      <p class="text-xs text-white font-bold">Flutter & Web</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="w-full lg:w-1/2 px-4">
-              <h2 class="font-bold text-dark text-3xl mb-4 lg:text-4xl">
-                About Me
-              </h2>
-              <p class="text-base text-secondary max-w-2xl mb-6">
-                Hello, I'm Wahyu Arliansyah. As a UI/UX Designer and Mobile
-                Developer, I have a passion for creating digital experiences
-                that are not only functional but also visually appealing. As an
-                Informatics Engineering student, I'm always eager to learn and
-                bridge the gap between creative design and technology.
-              </p>
+          </div>
+        </div>
+      </section>
+      <!-- Hero End -->
 
-              <h3 class="font-semibold text-dark text-xl mt-8">My Skills</h3>
-              <div class="flex flex-wrap gap-3">
-                <span
-                  class="bg-primary/20 text-primary text-sm font-semibold py-2 px-4 rounded-full"
-                  >Figma</span
-                >
-                <span
-                  class="bg-primary/20 text-primary text-sm font-semibold py-2 px-4 rounded-full"
-                  >Flutter</span
-                >
-                <span
-                  class="bg-primary/20 text-primary text-sm font-semibold py-2 px-4 rounded-full"
-                  >HTML</span
-                >
-                <span
-                  class="bg-primary/20 text-primary text-sm font-semibold py-2 px-4 rounded-full"
-                  >CSS</span
-                >
-                <span
-                  class="bg-primary/20 text-primary text-sm font-semibold py-2 px-4 rounded-full"
-                  >Tailwind CSS</span
-                >
-                <span
-                  class="bg-primary/20 text-primary text-sm font-semibold py-2 px-4 rounded-full"
-                  >MySQL</span
-                >
-                <span
-                  class="bg-primary/20 text-primary text-sm font-semibold py-2 px-4 rounded-full"
-                  >Firebase</span
-                >
+      <!-- About Start -->
+      <section id="about" class="min-h-screen flex items-start pt-20 justify-center relative leading-none">
+        <div class="container mx-auto px-4 w-full">
+          <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+            <div class="flex flex-wrap lg:flex-nowrap items-center gap-10">
+              
+              <!-- Profile Photo Column -->
+              <div class="w-full lg:w-5/12 flex justify-center">
+                <div class="relative w-full max-w-xs">
+                  <div class="aspect-square rounded-2xl overflow-hidden border-2 border-slate-700/80 shadow-2xl relative group">
+                    <img
+                      src="dist/img/my-profile.png"
+                      alt="Foto Profil Wahyu Arliansyah"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+                    />
+                    <div class="absolute inset-0 border border-primary/20 rounded-2xl pointer-events-none"></div>
+                  </div>
+                </div>
               </div>
+
+              <!-- Content Column -->
+              <div class="w-full lg:w-7/12">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-4">
+                  About Me
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
+                  Passionate about creating seamless digital solutions
+                </h2>
+                <p class="text-base text-slate-300 leading-relaxed mb-6">
+                  Hello! I'm <strong class="text-white">Wahyu Arliansyah</strong>, an Informatics Engineering student specializing in <span class="text-primary font-semibold">UI/UX Design</span> and <span class="text-accent-cyan font-semibold">Mobile Application Development</span>.
+                </p>
+                <p class="text-base text-slate-400 leading-relaxed mb-8">
+                  My journey blends visual aesthetic principles with clean code architecture. I aim to bridge the gap between creative visual layout design and powerful mobile/web technology to build products that users love.
+                </p>
+
+                <!-- Quick Highlights Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-800">
+                  <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <p class="text-2xl font-black text-primary">3+</p>
+                    <p class="text-xs text-slate-400 font-medium">Featured Projects</p>
+                  </div>
+                  <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <p class="text-2xl font-black text-accent-cyan">100%</p>
+                    <p class="text-xs text-slate-400 font-medium">Design & Code Passion</p>
+                  </div>
+                  <div class="col-span-2 sm:col-span-1 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <p class="text-2xl font-black text-accent-indigo">Active</p>
+                    <p class="text-xs text-slate-400 font-medium">Informatics Student</p>
+                  </div>
+                </div>
+
+              </div>
+
             </div>
           </div>
         </div>
       </section>
       <!-- About End -->
 
-      <!-- Recent Project Start -->
-      <section id="portfolio" class="pt-32 pb-16 bg-slate-100">
-        <div class="container mx-auto">
-          <div class="w-full px-4">
-            <div class="max-w-xl mx-auto text-center mb-16">
-              <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
-              <h2
-                class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl"
-              >
-                My Recent Projects
-              </h2>
-              <p class="font-medium text-md text-secondary">
-                These are some of the design and development projects I’ve
-                worked on. Each one gave me unique challenges and valuable
-                learning experiences.
-              </p>
+      <!-- Skills Start -->
+      <!-- Skils End -->
+
+      <!-- Projects Start -->
+      <section id="portfolio" class="min-h-screen flex items-center justify-center py-20 relative">
+        <div class="container mx-auto px-4 w-full">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-3">
+              Portfolio
             </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+              Featured Projects
+            </h2>
+            <p class="text-base text-slate-400">
+              Explore my recent design and mobile development work. Click on any project card to view full details.
+            </p>
           </div>
-          <div
-            class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto"
-          >
-          <!-- Project Ke-1 -->
-            <div class="mb-12 p-4 md:w-1/2">
-              <div
-                class="rounded-md shadow-md overflow-hidden bg-white cursor-pointer group"
-                onclick="openImageModal('dist/img/portofolio/porto-1.png', 'Design Front-End Apps Delivery', 'Front-end design for a modern delivery app, built with a focus on simplicity, responsive layouts, and user-friendly interactions.')"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    src="dist/img/portofolio/porto-1.png"
-                    alt="Project 1"
-                    class="w-full group-hover:scale-110 transition duration-300"
-                  />
-                </div>
-                <div class="py-6 px-5">
-                  <h3 class="font-semibold text-xl text-dark mb-2 truncate">
-                    Design Front-End Apps Delivery
-                  </h3>
-                  <p class="text-base text-secondary">Click to see details.</p>
-                </div>
-              </div>
-            </div>
-            <!-- Project Ke-2 -->
-            <div class="mb-12 p-4 md:w-1/2">
-              <div
-                class="rounded-md shadow-md overflow-hidden bg-white cursor-pointer group"
-                onclick="openImageModal('dist/img/portofolio/porto-3-real.png', 'Design Apps Headline Hub (News App)', 'A dynamic news app that combines clean UI design with API integration to deliver real-time news in a user-friendly interface.')"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    src="dist/img/portofolio/porto-3-real.png"
-                    alt="Project 3"
-                    class="w-full group-hover:scale-110 transition duration-300"
-                  />
-                </div>
-                <div class="py-6 px-5">
-                  <h3 class="font-semibold text-xl text-dark mb-2 truncate">
-                    Apps Headline Hub (News App)
-                  </h3>
-                  <p class="text-base text-secondary">Click to see details.</p>
-                </div>
-              </div>
-            </div>
-            <!-- Project ke-3 -->
-            <div class="mb-12 p-4 md:w-1/2">
-              <div
-                class="rounded-md shadow-md overflow-hidden bg-white cursor-pointer group"
-                onclick="openImageModal('dist/img/portofolio/YStore.png', 'YStore (Management App)', 'A modern asset management platform that enhances productivity by ensuring every asset is recorded, traceable, and always available when needed.')"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    src="dist/img/portofolio/YStore.png"
-                    alt="Project 3"
-                    class="w-full group-hover:scale-110 transition duration-300"
-                  />
-                </div>
-                <div class="py-6 px-5">
-                  <h3 class="font-semibold text-xl text-dark mb-2 truncate">
-                    YStore (Management App)
-                  </h3>
-                  <p class="text-base text-secondary">Click to see details.</p>
+
+          <!-- Category Filter Tabs -->
+          <div class="flex flex-wrap items-center justify-center gap-2.5 mb-12">
+            <button
+              onclick="filterProjects('all', this)"
+              class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-primary text-white shadow-glow transition-all duration-300"
+            >
+              All Projects
+            </button>
+            <button
+              onclick="filterProjects('mobile', this)"
+              class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-slate-800/80 text-slate-300 hover:bg-slate-700 transition-all duration-300"
+            >
+              Mobile Apps
+            </button>
+            <button
+              onclick="filterProjects('uiux', this)"
+              class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-slate-800/80 text-slate-300 hover:bg-slate-700 transition-all duration-300"
+            >
+              UI/UX Design
+            </button>
+            <button
+              onclick="filterProjects('web', this)"
+              class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-slate-800/80 text-slate-300 hover:bg-slate-700 transition-all duration-300"
+            >
+              Web Systems
+            </button>
+          </div>
+
+          <!-- Projects Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Project 1 -->
+            <div
+              class="project-card glass-card-hover rounded-2xl overflow-hidden cursor-pointer group transition-all duration-300"
+              data-category="uiux"
+              onclick="openImageModal('dist/img/portofolio/porto-1.png', 'Design Front-End Apps Delivery', 'Front-end design for a modern delivery app, built with a focus on simplicity, responsive layouts, and user-friendly interactions.', 'UI/UX Design, Figma, Tailwind CSS')"
+            >
+              <div class="aspect-video overflow-hidden bg-slate-950 relative">
+                <img
+                  src="dist/img/portofolio/porto-1.png"
+                  alt="Design Front-End Apps Delivery"
+                  class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                />
+                <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span class="px-4 py-2 rounded-full bg-primary/90 text-white text-xs font-bold shadow-lg transform translate-y-2 group-hover:translate-y-0 transition duration-300">
+                    View Details ↗
+                  </span>
                 </div>
               </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="bg-teal-500/10 text-teal-400 border border-teal-500/20 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
+                    UI/UX Design
+                  </span>
+                  <span class="bg-slate-800 text-slate-400 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
+                    Front-End
+                  </span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition duration-300">
+                  Design Front-End Apps Delivery
+                </h3>
+                <p class="text-sm text-slate-400 line-clamp-2">
+                  Front-end design for a modern delivery application with responsive layouts and seamless checkout flows.
+                </p>
+              </div>
             </div>
+
+            <!-- Project 2 -->
+            <div
+              class="project-card glass-card-hover rounded-2xl overflow-hidden cursor-pointer group transition-all duration-300"
+              data-category="mobile"
+              onclick="openImageModal('dist/img/portofolio/porto-3-real.png', 'Headline Hub (News App)', 'A dynamic news application that combines clean mobile UI design with REST API integration to deliver real-time breaking news.', 'Flutter, Mobile App, REST API')"
+            >
+              <div class="aspect-video overflow-hidden bg-slate-950 relative">
+                <img
+                  src="dist/img/portofolio/porto-3-real.png"
+                  alt="Headline Hub (News App)"
+                  class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                />
+                <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span class="px-4 py-2 rounded-full bg-primary/90 text-white text-xs font-bold shadow-lg transform translate-y-2 group-hover:translate-y-0 transition duration-300">
+                    View Details ↗
+                  </span>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
+                    Mobile App
+                  </span>
+                  <span class="bg-slate-800 text-slate-400 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
+                    Flutter
+                  </span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition duration-300">
+                  Headline Hub (News App)
+                </h3>
+                <p class="text-sm text-slate-400 line-clamp-2">
+                  Dynamic mobile news application bringing real-time headlines with API integration and custom user interface.
+                </p>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div
+              class="project-card glass-card-hover rounded-2xl overflow-hidden cursor-pointer group transition-all duration-300"
+              data-category="web"
+              onclick="openImageModal('dist/img/portofolio/YStore.png', 'YStore Asset Management System', 'A modern asset management platform that enhances organizational productivity by ensuring every asset is recorded, traceable, and available.', 'Tailwind CSS, Web App, MySQL')"
+            >
+              <div class="aspect-video overflow-hidden bg-slate-950 relative">
+                <img
+                  src="dist/img/portofolio/YStore.png"
+                  alt="YStore Management App"
+                  class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                />
+                <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span class="px-4 py-2 rounded-full bg-primary/90 text-white text-xs font-bold shadow-lg transform translate-y-2 group-hover:translate-y-0 transition duration-300">
+                    View Details ↗
+                  </span>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
+                    Web System
+                  </span>
+                  <span class="bg-slate-800 text-slate-400 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
+                    Management
+                  </span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition duration-300">
+                  YStore Asset Management
+                </h3>
+                <p class="text-sm text-slate-400 line-clamp-2">
+                  Asset management platform featuring traceable inventory tracking, item status dashboard, and structured data handling.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
-      <!-- Recent Project End -->
+      <!-- Projects End -->
 
       <!-- Contact Start -->
-      <section
-        id="contact"
-        class="min-h-screen bg-white flex items-center justify-center"
-      >
-        <div class="container mx-auto">
-          <div class="w-full px-4">
-            <div class="max-w-xl mx-auto text-center">
-              <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
-              <h2
-                class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl"
-              >
-                Get in Touch
+      <section id="contact" class="min-h-screen flex items-center justify-center py-20 relative">
+        <div class="container mx-auto px-4 w-full">
+          <div class="max-w-4xl mx-auto">
+            
+            <div class="text-center mb-12">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-3">
+                Get In Touch
+              </div>
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+                Let's Work Together
               </h2>
-              <p class="font-medium text-md text-secondary mb-8">
-                Please don’t hesitate to contact me if you’re interested in
-                collaboration, have inquiries, or simply wish to connect.
+              <p class="text-base text-slate-400 max-w-xl mx-auto">
+                Have a project idea or want to discuss design/mobile development opportunities? Feel free to reach out anytime!
               </p>
-              <a
-                href="mailto:wahyuarliansyah00@gmail.com"
-                class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
-              >
-                Send Email
-              </a>
             </div>
+
+            <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                
+                <!-- Left Info Side -->
+                <div>
+                  <h3 class="text-2xl font-bold text-white mb-4">Contact Information</h3>
+                  <p class="text-sm text-slate-400 leading-relaxed mb-8">
+                    I am currently open for freelance projects, full-time roles, and design collaborations. Send an email or connect via social media.
+                  </p>
+
+                  <div class="space-y-4 mb-8">
+                    <!-- Direct Email Box -->
+                    <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 flex items-center justify-between gap-4">
+                      <div class="flex items-center gap-3 overflow-hidden">
+                        <span class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center shrink-0">
+                          ✉️
+                        </span>
+                        <div class="truncate">
+                          <p class="text-xs text-slate-400">Email Address</p>
+                          <p class="text-sm font-bold text-white truncate">wahyuarliansyah00@gmail.com</p>
+                        </div>
+                      </div>
+                      <button
+                        onclick="copyEmail('wahyuarliansyah00@gmail.com')"
+                        class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-teal-300 shrink-0 transition duration-200"
+                        title="Copy Email"
+                      >
+                        Copy
+                      </button>
+                    </div>
+
+                    <!-- Location Box -->
+                    <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 flex items-center gap-3">
+                      <span class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center shrink-0">
+                        📍
+                      </span>
+                      <div>
+                        <p class="text-xs text-slate-400">Location</p>
+                        <p class="text-sm font-bold text-white">Indonesia</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Social Links -->
+                  <div>
+                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Connect on Socials</p>
+                    <div class="flex items-center gap-3">
+                      <a
+                        href="https://github.com/WahyuArliansyah"
+                        target="_blank"
+                        class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-primary hover:border-primary/50 hover:bg-slate-800 transition duration-300"
+                        aria-label="GitHub Profile"
+                      >
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                        </svg>
+                      </a>
+                      <a
+                        href="https://www.instagram.com/wahyuarliansyah_/"
+                        target="_blank"
+                        class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-primary hover:border-primary/50 hover:bg-slate-800 transition duration-300"
+                        aria-label="Instagram Profile"
+                      >
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/in/wahyu-arliansyah-864387392"
+                        target="_blank"
+                        class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-primary hover:border-primary/50 hover:bg-slate-800 transition duration-300"
+                        aria-label="LinkedIn Profile"
+                      >
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right Direct Action Card -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-slate-950/80 border border-slate-800 text-center">
+                  <!-- <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-primary to-accent-cyan flex items-center justify-center text-2xl mx-auto mb-6 shadow-glow">
+                    🚀
+                  </div> -->
+                  <h4 class="text-xl font-bold text-white mb-2">Send an Email Directly</h4>
+                  <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-6">
+                    Click the button below to open your default email app with pre-filled recipient.
+                  </p>
+
+                  <a
+                    href="mailto:wahyuarliansyah00@gmail.com?subject=Inquiry%20from%20Portfolio%20Website"
+                    class="block w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-primary to-accent-cyan text-white font-bold text-sm hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                  >
+                    Send Email Now ✉️
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
+      <!-- Contact End -->
     </main>
-    <!-- Contact End -->
 
+    <!-- Footer Start -->
+    <footer class="bg-slate-950 py-10 border-t border-slate-800/80">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <a href="#home" class="font-bold text-lg text-white">
+            Wahyu<span class="text-primary">.dev</span>
+          </a>
 
-    <footer class="bg-dark py-12">
-      <div class="container mx-auto">
-        <div class="w-full pt-10 border-t border-slate-700">
-          <div class="flex items-center justify-center mb-5">
-            <a
-              href="https://github.com/WahyuArliansyah"
-              target="_blank"
-              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border-2 border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
-            >
-              <svg
-                role="img"
-                class="fill-current"
-                width="20"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>GitHub</title>
-                <path
-                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-                />
-              </svg>
-            </a>
-            <a
-              href="https://www.instagram.com/wahyuarliansyah_/"
-              target="_blank"
-              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border-2 border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
-            >
-              <svg
-                class="fill-current"
-                width="20"
-                role="img"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Instagram</title>
-                <path
-                  d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
-                />
-              </svg>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/wahyu-arliansyah-864387392"
-              target="_blank"
-              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border-2 border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
-            >
-              <svg class="fill-current" width="20" viewBox="0 0 24 24">
-                <path
-                  d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"
-                />
-              </svg>
-            </a>
-          </div>
-          <p class="font-medium text-sm text-slate-500 text-center">
-            &copy; 2025 Wahyu Arliansyah. Made with ❤️ using Tailwind CSS.
+          <p class="text-xs text-slate-400 text-center">
+            &copy; 2026 Wahyu Arliansyah. Designed & Developed with using Tailwind CSS.
           </p>
+
+          <a href="#home" class="text-xs text-slate-400 hover:text-primary transition duration-200">
+            Back to Top ↑
+          </a>
         </div>
       </div>
     </footer>
+    <!-- Footer End -->
 
+    <!-- Image & Project Detail Modal Start -->
     <div
       id="imageModal"
-      class="hidden fixed inset-0 z-[9999] items-center justify-center bg-black/80 p-4 transition-opacity duration-300"
+      class="hidden fixed inset-0 z-[9999] items-center justify-center bg-black/80 backdrop-blur-md p-4 transition-opacity duration-300"
     >
-      <div
-        class="relative w-full max-w-2xl bg-white rounded-lg shadow-xl overflow-hidden"
-      >
+      <div class="relative w-full max-w-2xl bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
         <button
           id="closeModalButton"
-          class="absolute top-2 right-4 text-gray-500 hover:text-dark text-3xl"
+          class="absolute top-3 right-4 w-9 h-9 rounded-full bg-slate-950/80 border border-slate-700 text-slate-400 hover:text-white flex items-center justify-center text-xl z-10 transition duration-200"
+          aria-label="Close modal"
         >
           &times;
         </button>
-        <img
-          id="modalImage"
-          src=""
-          alt="Portfolio Image"
-          class="w-full h-auto max-h-[70vh] object-contain bg-slate-100"
-        />
+
+        <div class="aspect-video w-full bg-slate-950 overflow-hidden relative">
+          <img
+            id="modalImage"
+            src=""
+            alt="Portfolio Image Preview"
+            class="w-full h-full object-contain"
+          />
+        </div>
+
         <div class="p-6">
-          <h3 id="modalTitle" class="text-2xl font-bold text-dark mb-2"></h3>
-          <p id="modalDescription" class="text-base text-secondary"></p>
+          <div id="modalTags" class="flex flex-wrap gap-2 mb-3"></div>
+          <h3 id="modalTitle" class="text-2xl font-extrabold text-white mb-2"></h3>
+          <p id="modalDescription" class="text-sm text-slate-300 leading-relaxed"></p>
         </div>
       </div>
+    </div>
+    <!-- Modal End -->
+
+    <!-- Copy Toast Notification -->
+    <div
+      id="copyToast"
+      class="fixed bottom-6 right-6 z-[9999] opacity-0 pointer-events-none transition-all duration-300 px-4 py-3 rounded-xl bg-teal-500 text-white font-semibold text-xs shadow-glow flex items-center gap-2"
+    >
+      <span>✓</span>
+      <span>Email copied to clipboard!</span>
     </div>
 
     <script src="dist/js/script.js"></script>
