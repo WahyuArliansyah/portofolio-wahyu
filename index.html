@@ -20,7 +20,7 @@
     <div class="fixed bottom-10 left-10 -z-10 w-96 h-96 bg-accent-cyan/10 rounded-full blur-[140px] pointer-events-none"></div>
 
     <!-- Header / Navbar Start -->
-    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 ">
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-between py-4 border-b border-slate-800/40 lg:border-none">
           <a href="#home" class="flex items-center gap-2 group">
@@ -45,7 +45,10 @@
 
             <nav
               id="nav-menu"
-              class="hidden absolute py-6 px-6 bg-slate-900/95 backdrop-blur-xl border border-slate-800 shadow-2xl rounded-2xl max-w-[280px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:border-none lg:shadow-none lg:max-w-full lg:p-0"
+              class="hidden absolute py-6 px-6 bg-slate-900/95 backdrop-blur-xl border 
+              border-slate-800 shadow-2xl rounded-2xl max-w-[280px] w-full right-4 top-full 
+              lg:block lg:static lg:bg-transparent lg:border-none lg:shadow-none lg:max-w-full 
+              lg:p-0"
             >
               <ul class="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-8">
                 <li>
@@ -73,31 +76,58 @@
 
     <main>
       <!-- Home Start -->
-      <section id="home" class="pt-36 pb-32">
-        <div class="container mx-auto">
-          <div class="flex flex-wrap">
-            <div class="w-full self-center px-4 lg:w-1/2">
-              <h1 class="text-base font-semibold text-primary md:text-xl">
-                Hello 👋, I'm
-                <span
-                  class="block font-bold text-dark text-4xl mt-1 lg:text-5xl"
-                  >Wahyu Arliansyah</span
-                >
+      <section id="home" class="min-h-screen flex items-center justify-center pt-28 pb-16 relative">
+        <div class="container mx-auto px-4 w-full">
+          <div class="flex flex-wrap items-center">
+            
+            <div class="w-full lg:w-7/12 mb-12 lg:mb-0">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-teal-500/30 text-teal-300 text-xs font-semibold mb-6 shadow-glow">
+                <span class="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse"></span>
+                Available for Freelance & Full-time Roles
+              </div>
+
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-4">
+                Hello, I'm <br />
+                <span class="text-gradient">Wahyu Arliansyah</span>
               </h1>
-              <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">
-                UI/UX Designer & Mobile Developer
-              </h2>
-              <p class="font-medium text-secondary leading-relaxed mb-10">
-                Welcome to my digital portfolio. Let’s create an extraordinary
-                user experience together!
+
+              <div class="flex flex-wrap items-center gap-2 mb-6">
+                <span class="px-3 py-1 rounded-md bg-slate-800/80 border border-slate-700/60 text-slate-300 text-xs font-semibold">
+                  UI/UX Designer
+                </span>
+                <span class="text-slate-600">•</span>
+                <span class="px-3 py-1 rounded-md bg-slate-800/80 border border-slate-700/60 text-slate-300 text-xs font-semibold">
+                  Mobile Developer
+                </span>
+              </div>
+
+              <p class="text-base sm:text-lg text-slate-400 max-w-xl leading-relaxed mb-10">
+                Crafting modern digital experiences that combine intuitive UI/UX design with 
+                clean, high-performance mobile software engineering.
               </p>
-              <a
-                href="dist/Curriculum-Vitae.pdf"
-                target="_blank"
-                class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
-              >
-                Download CV
-              </a>
+
+              <div class="flex flex-wrap items-center gap-4">
+                <a
+                  href="#portfolio"
+                  class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-primary to-accent-cyan text-white font-semibold text-sm hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                >
+                  <span>Explore My Projects</span>
+                  <svg class="w-4 h-4 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                  </svg>
+                </a>
+
+                <a
+                  href="dist/CV-Wahyu Arliansyah.pdf"
+                  target="_blank"
+                  class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-slate-900/80 border border-slate-700/80 text-slate-200 font-semibold text-sm hover:bg-slate-800 hover:border-slate-600 transition-all duration-300"
+                >
+                  <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                  <span>Download CV</span>
+                </a>
+              </div>
             </div>
 
             <div class="w-full lg:w-5/12 flex justify-center">
@@ -106,33 +136,33 @@
                 <div class="absolute inset-0 bg-gradient-to-tr from-primary/30 to-accent-indigo/30 rounded-3xl blur-2xl -z-10 transform scale-95"></div>
 
                 <!-- Main Hero Image Frame -->
-                <div class="glass-card rounded-3xl p-4 relative overflow-hidden group">
-                  <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-slate-950/80 relative">
+                <div class="glass-card rounded-3xl p-2 relative overflow-hidden group max-w-[380px] mx-auto">
+                  <div class="aspect-square rounded-2xl overflow-hidden bg-slate-950/80 relative">
                     <img
-                      src="dist/img/1789133794525.jpg"
+                      src="dist/img/profile-cv.jpg"
                       alt="Wahyu Arliansyah"
-                      class="w-full h-full object-cover object-top group-hover:scale-105 transition-all duration-500"
+                      class="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-500"
                     />
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
                   </div>
 
                   <!-- Floating Stat Pill 1 -->
-                  <div class="absolute top-8 left-6 glass-card py-2 px-3.5 rounded-xl flex items-center gap-2.5 shadow-xl">
+                  <!-- <div class="absolute top-8 left-6 glass-card py-2 px-3.5 rounded-xl flex items-center gap-2.5 shadow-xl">
                     <span class="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-400 flex items-center justify-center text-sm font-bold">🎨</span>
                     <div>
                       <p class="text-[11px] text-slate-400 font-medium">Focus</p>
                       <p class="text-xs text-white font-bold">UI/UX Design</p>
                     </div>
-                  </div>
+                  </div> -->
 
                   <!-- Floating Stat Pill 2 -->
-                  <div class="absolute bottom-8 right-6 glass-card py-2 px-3.5 rounded-xl flex items-center gap-2.5 shadow-xl">
+                  <!-- <div class="absolute bottom-8 right-6 glass-card py-2 px-3.5 rounded-xl flex items-center gap-2.5 shadow-xl">
                     <span class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-sm font-bold">📱</span>
                     <div>
                       <p class="text-[11px] text-slate-400 font-medium">Tech</p>
                       <p class="text-xs text-white font-bold">Flutter & Web</p>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -140,10 +170,10 @@
           </div>
         </div>
       </section>
-      <!-- Hero End -->
+      <!-- Home End -->
 
       <!-- About Start -->
-      <section id="about" class="min-h-screen flex items-start pt-20 justify-center relative leading-none">
+      <section id="about" class="min-h-screen flex items-start pt-4 pb-20 justify-center relative leading-none">
         <div class="container mx-auto px-4 w-full">
           <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden">
             <div class="flex flex-wrap lg:flex-nowrap items-center gap-10">
@@ -171,14 +201,18 @@
                   Passionate about creating seamless digital solutions
                 </h2>
                 <p class="text-base text-slate-300 leading-relaxed mb-6">
-                  Hello! I'm <strong class="text-white">Wahyu Arliansyah</strong>, an Informatics Engineering student specializing in <span class="text-primary font-semibold">UI/UX Design</span> and <span class="text-accent-cyan font-semibold">Mobile Application Development</span>.
+                  Hello! I'm <strong class="text-white">Wahyu Arliansyah</strong>, a Computer Science graduate with a passion for
+                   <span class="text-primary font-semibold">UI/UX Design</span> 
+                   and <span class="text-accent-cyan font-semibold">Mobile App Development</span>.
                 </p>
                 <p class="text-base text-slate-400 leading-relaxed mb-8">
-                  My journey blends visual aesthetic principles with clean code architecture. I aim to bridge the gap between creative visual layout design and powerful mobile/web technology to build products that users love.
-                </p>
+                My career journey combines principles of visual aesthetics with clean code 
+                architecture. I strive to bridge the gap between creative visual layout design 
+                and cutting-edge mobile and web technologies to create products that users love.
+              </p>
 
                 <!-- Quick Highlights Grid -->
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-800">
+                <!-- <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-800">
                   <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
                     <p class="text-2xl font-black text-primary">3+</p>
                     <p class="text-xs text-slate-400 font-medium">Featured Projects</p>
@@ -191,7 +225,7 @@
                     <p class="text-2xl font-black text-accent-indigo">Active</p>
                     <p class="text-xs text-slate-400 font-medium">Informatics Student</p>
                   </div>
-                </div>
+                </div> -->
 
               </div>
 
@@ -201,11 +235,8 @@
       </section>
       <!-- About End -->
 
-      <!-- Skills Start -->
-      <!-- Skils End -->
-
       <!-- Projects Start -->
-      <section id="portfolio" class="min-h-screen flex items-center justify-center py-20 relative">
+      <section id="portfolio" class="flex items-center justify-center pt-4 pb-20 relative">
         <div class="container mx-auto px-4 w-full">
           <div class="text-center max-w-2xl mx-auto mb-12">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-3">
@@ -215,7 +246,8 @@
               Featured Projects
             </h2>
             <p class="text-base text-slate-400">
-              Explore my recent design and mobile development work. Click on any project card to view full details.
+              Explore my recent design and mobile development work.
+               Click on any project card to view full details.
             </p>
           </div>
 
@@ -239,12 +271,12 @@
             >
               UI/UX Design
             </button>
-            <button
+            <!-- <button
               onclick="filterProjects('web', this)"
               class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-slate-800/80 text-slate-300 hover:bg-slate-700 transition-all duration-300"
             >
               Web Systems
-            </button>
+            </button> -->
           </div>
 
           <!-- Projects Grid -->
@@ -253,8 +285,11 @@
             <!-- Project 1 -->
             <div
               class="project-card glass-card-hover rounded-2xl overflow-hidden cursor-pointer group transition-all duration-300"
-              data-category="uiux"
-              onclick="openImageModal('dist/img/portofolio/porto-1.png', 'Design Front-End Apps Delivery', 'Front-end design for a modern delivery app, built with a focus on simplicity, responsive layouts, and user-friendly interactions.', 'UI/UX Design, Figma, Tailwind CSS')"
+              data-category="mobile"
+              onclick="openImageModal('dist/img/portofolio/porto-1.png', 
+              'Design Front-End Apps Delivery', 
+              'Front-end design for a modern delivery app, built with a focus on simplicity, responsive layouts, and user-friendly interactions.',
+              'Front-End Design, Mobile App, Delivery Application')"
             >
               <div class="aspect-video overflow-hidden bg-slate-950 relative">
                 <img
@@ -271,17 +306,17 @@
               <div class="p-6">
                 <div class="flex items-center gap-2 mb-3">
                   <span class="bg-teal-500/10 text-teal-400 border border-teal-500/20 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
-                    UI/UX Design
+                    Mobile Apps
                   </span>
                   <span class="bg-slate-800 text-slate-400 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
-                    Front-End
+                    Delivery Application
                   </span>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition duration-300">
                   Design Front-End Apps Delivery
                 </h3>
                 <p class="text-sm text-slate-400 line-clamp-2">
-                  Front-end design for a modern delivery application with responsive layouts and seamless checkout flows.
+                  Front-end design for a modern delivery app, built with a focus on simplicity, responsive layouts, and user-friendly interactions.
                 </p>
               </div>
             </div>
@@ -290,12 +325,15 @@
             <div
               class="project-card glass-card-hover rounded-2xl overflow-hidden cursor-pointer group transition-all duration-300"
               data-category="mobile"
-              onclick="openImageModal('dist/img/portofolio/porto-3-real.png', 'Headline Hub (News App)', 'A dynamic news application that combines clean mobile UI design with REST API integration to deliver real-time breaking news.', 'Flutter, Mobile App, REST API')"
+              onclick="openImageModal('dist/img/portofolio/porto-3-real.png', 
+              'Headline Hub', 
+              'A dynamic news application that combines clean mobile UI design with REST API integration to deliver real-time breaking news.',
+              'Flutter, REST API, News Application')"
             >
               <div class="aspect-video overflow-hidden bg-slate-950 relative">
                 <img
                   src="dist/img/portofolio/porto-3-real.png"
-                  alt="Headline Hub (News App)"
+                  alt="Headline Hub"
                   class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                 />
                 <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -307,17 +345,18 @@
               <div class="p-6">
                 <div class="flex items-center gap-2 mb-3">
                   <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
-                    Mobile App
+                    Mobile Apps
                   </span>
                   <span class="bg-slate-800 text-slate-400 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
-                    Flutter
+                    News Application
                   </span>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition duration-300">
-                  Headline Hub (News App)
+                  Headline Hub
                 </h3>
                 <p class="text-sm text-slate-400 line-clamp-2">
-                  Dynamic mobile news application bringing real-time headlines with API integration and custom user interface.
+                  A dynamic news application that combines clean mobile UI design with 
+                  REST API integration to deliver real-time breaking news.
                 </p>
               </div>
             </div>
@@ -325,8 +364,10 @@
             <!-- Project 3 -->
             <div
               class="project-card glass-card-hover rounded-2xl overflow-hidden cursor-pointer group transition-all duration-300"
-              data-category="web"
-              onclick="openImageModal('dist/img/portofolio/YStore.png', 'YStore Asset Management System', 'A modern asset management platform that enhances organizational productivity by ensuring every asset is recorded, traceable, and available.', 'Tailwind CSS, Web App, MySQL')"
+              data-category="mobile"
+              onclick="openImageModal('dist/img/portofolio/YStore.png', 'YStore Asset Management System',
+              'Retail asset management platform featuring traceable inventory tracking, item status dashboard, and structured data handling.', 
+              'Flutter, Mobile App, Retail Asset Management')"
             >
               <div class="aspect-video overflow-hidden bg-slate-950 relative">
                 <img
@@ -342,18 +383,101 @@
               </div>
               <div class="p-6">
                 <div class="flex items-center gap-2 mb-3">
-                  <span class="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
-                    Web System
+                  <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
+                    Mobile Apps
                   </span>
                   <span class="bg-slate-800 text-slate-400 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
-                    Management
+                    Retail System
                   </span>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition duration-300">
-                  YStore Asset Management
+                  YStore Retail Asset Management
                 </h3>
                 <p class="text-sm text-slate-400 line-clamp-2">
-                  Asset management platform featuring traceable inventory tracking, item status dashboard, and structured data handling.
+                  Retail asset management platform featuring traceable inventory tracking, 
+                  item status dashboard, and structured data handling.
+                </p>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+             <div
+              class="project-card glass-card-hover rounded-2xl overflow-hidden cursor-pointer group transition-all duration-300"
+              data-category="uiux"
+              onclick="openImageModal('dist/img/portofolio/porto-4.png', 
+              'Design Asset Management Apps',
+              'UI/UX design for a modern asset management application, focused on managing assets, tracking borrowings, and simplifying maintenance workflows through a clean and user-friendly interface.',
+              'UI/UX Design, Figma, Prototyping')"
+            >
+              <div class="aspect-video overflow-hidden bg-slate-950 relative">
+                <img
+                  src="dist/img/portofolio/porto-4.png"
+                  alt="Design Asset Management Apps"
+                  class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                />
+                <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span class="px-4 py-2 rounded-full bg-primary/90 text-white text-xs font-bold shadow-lg transform translate-y-2 group-hover:translate-y-0 transition duration-300">
+                    View Details ↗
+                  </span>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
+                    UI/UX Design
+                  </span>
+                  <span class="bg-slate-800 text-slate-400 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
+                    Campus System
+                  </span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition duration-300">
+                  Design Asset Management Apps
+                </h3>
+                <p class="text-sm text-slate-400 line-clamp-2">
+                  UI/UX design for a modern asset management application, 
+                  focused on managing assets, tracking borrowings,
+                  and simplifying maintenance workflows through a clean and user-friendly interface.
+                </p>
+              </div>
+            </div>
+
+            <!-- Project 5 -->
+             <div
+              class="project-card glass-card-hover rounded-2xl overflow-hidden cursor-pointer group transition-all duration-300"
+              data-category="mobile"
+              onclick="openImageModal('dist/img/portofolio/porto-5.jpeg', 
+              'Mitra Taskly (School Task Management App)',
+              'A mobile application designed to streamline school task management, allowing students to submit assignments, access learning materials, and track their grades in real time through a clean and intuitive interface.',
+              'Flutter, Mobile App, Education System')"
+            >
+              <div class="aspect-video overflow-hidden bg-slate-950 relative">
+                <img
+                  src="dist/img/portofolio/porto-5.jpeg"
+                  alt="Mitra Taskly (School Task Management App)"
+                  class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                />
+                <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span class="px-4 py-2 rounded-full bg-primary/90 text-white text-xs font-bold shadow-lg transform translate-y-2 group-hover:translate-y-0 transition duration-300">
+                    View Details ↗
+                  </span>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
+                    Mobile Apps
+                  </span>
+                  <span class="bg-slate-800 text-slate-400 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
+                    School System
+                  </span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition duration-300">
+                  Mitra Taskly (School Task Management App)
+                </h3>
+                <p class="text-sm text-slate-400 line-clamp-2">
+                  A mobile application designed to streamline school task management, 
+                  allowing students to submit assignments, access learning materials,
+                  and track their grades in real time through a clean and intuitive interface.
                 </p>
               </div>
             </div>
@@ -364,7 +488,7 @@
       <!-- Projects End -->
 
       <!-- Contact Start -->
-      <section id="contact" class="min-h-screen flex items-center justify-center py-20 relative">
+      <section id="contact" class="min-h-screen flex items-center justify-center pt-4 pb-20 relative">
         <div class="container mx-auto px-4 w-full">
           <div class="max-w-4xl mx-auto">
             
@@ -375,9 +499,9 @@
               <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
                 Let's Work Together
               </h2>
-              <p class="text-base text-slate-400 max-w-xl mx-auto">
+              <!-- <p class="text-base text-slate-400 max-w-xl mx-auto">
                 Have a project idea or want to discuss design/mobile development opportunities? Feel free to reach out anytime!
-              </p>
+              </p> -->
             </div>
 
             <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden">
@@ -489,15 +613,15 @@
     </main>
 
     <!-- Footer Start -->
-    <footer class="bg-slate-950 py-10 border-t border-slate-800/80">
+    <footer class="bg-slate-950 py-6 border-t border-slate-800/80">
       <div class="container mx-auto px-4">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
           <a href="#home" class="font-bold text-lg text-white">
-            Wahyu<span class="text-primary">.dev</span>
+            Wahyu<span class="text-primary">Arliansyah</span>
           </a>
 
           <p class="text-xs text-slate-400 text-center">
-            &copy; 2026 Wahyu Arliansyah. Designed & Developed with using Tailwind CSS.
+            &copy; 2026 Wahyu Arliansyah.
           </p>
 
           <a href="#home" class="text-xs text-slate-400 hover:text-primary transition duration-200">
